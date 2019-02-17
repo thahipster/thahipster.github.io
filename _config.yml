@@ -1,0 +1,31 @@
+# Site settings
+title: "Apfelhammer weckt Abwehrkräfte"
+logo: logo.png
+email: thafaker@gmx.net
+description: > # this means to ignore newlines until "url:"
+ Das ist meine kleine Website, basierend auf Jekyll, einem
+ statischen HTML-Generator. Apfelhammer.de! Setzen sie sich
+ gern mit mir auseinander. Wir haben hier sogar Kommentare.
+url: "https://apfelhammer.de" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+twitter_username: apfelhammer
+github_username:  thafaker
+
+permalink: pretty
+paginate: 5
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Kommentarsystem isso auf appleham.uber.space auf Apfelhammer einbinden
+isso:
+  data_isso: https://isso.apfelhammer.de
+#  script_src: http://thafaker.crabdance.com/comments/js/embed.min.js
+  script_src: https://isso.apfelhammer.de/js/embed.min.js
+
+exclude: [vendor]

@@ -1,0 +1,82 @@
+---
+layout: post
+title: Windows 2000 (W2K) in 2018 mit Updates
+date: '21:00 2018-12-03'
+image: w2k.jpeg
+tags: 
+ - anleitung
+ - software
+ - windows 2000
+ - w2k
+---
+
+Ich betreibe seit einiger Zeit einen alten **Vintage PC**, auf dem ich allerhand altes Zeug installiere und ausprobiere, **compute like it's 1996**. Angefangen mit einem originalen *DOS 6.22*, dann den Versuchen dieses Internetfähig zu machen, gefolgt von einer Installation *Windows 3.11*, gefolgt von einem *OS/2 Warp 4.51* neben einem alten Linux im reinen Text-Modus (Weechat, Mutt, SLRN…) und nun… ja nun einem *Windows 2000*. Und über die Installation dieses Windows 2000, also hin zu einem funktionierenden OS in 2018, mit allerlei Updates und der Möglichkeit, (fast) jede XP Software zu installieren, darüber möchte ich in diesem Artikel kurz berichten. <!--more-->
+
+Zu meiner Verschriftlichung gibt es diverse, meist englischsprachige, Videos, aber ich bin ein Freund des Textes. Natürlich kann man sich jetzt auch auf die Suche nach diesen Videos begeben, aber eine schriftlich Zusammenfassung nützt vielleicht nicht nur mir. Ach ja, zwei Fußnoten[^1] zu meinem alten PC[^2].
+
+> In diversen Foren wird darüber berichtet, dass man ein englisches Windows betreiben sollte. Ich habe das mit einem deutschen Windows 2000 durchgeführt. Durch die sprachlich gemischten Updates ist die Sprache meines Windows 2000 am Ende zwar etwas inkonsistent, aber das fällt eigentlich kaum auf. Es geht also mit einer deutschen Version.
+
+**Schritt 1**: Windows 2000 auf das *Service Pack 4* upgraden. Das SP4 kann hier herunter geladen werden. Manche haben bereits ein ISO-Image, in der das SP4 bereits integriert ist. Diese müssen nicht updaten
+ - [W2K SP4 EN](ftp://ftp.unice.fr/windows/servicepack/win2k/sp4/W2KSP4_EN.EXE) (*ca. 135 MB*)
+
+**Schritt 2**: *Internet Explorer 6, Service Pack 1* installieren. Man benötigt diese aktuelleste Version des IE6, damit die automaitsche Update-Funktion von Windows 2000 später funktioniert, als Grundlage sozusagen. Surfen kann man mit dem alten Browser heute ohnehin nicht mehr. Er unterstützt eine Vielzahl von Sicherheitsfunktionen neuer Websites (deren Server) nicht mehr. Danach muss der Computer neu gestartet werden.
+ - [MSIE62K.EXE](http://www.mediafire.com/file/f78iyq3vfe1n6d3/MSIE62K.EXE) (*ca. 12 MB*)
+
+**Schritt 3**: Im Anschluss an den Neustart das **Update Rollup 1** installieren. Danach den Computer abermals neu starten.
+ - [Windows2000-KB891861-v2-x86-ENU.EXE](http://www.mediafire.com/file/lyz6fktqj87cusr/Windows2000-KB891861-v2-x86-ENU.EXE) (*ca. 32 MB*)
+
+**Schritt 4**: Die Datei *Windows Update Agent 3.0* ausführen. Dieser Dienst sorgt dafür, dass die Windows Update-Seite wieder funktioniert.
+ - [WindowsUpdateAgent30-x86](https://go.microsoft.com/fwlink/?LinkID=91237) (*ca. 6 MB*)
+
+**Schritt 5**: Roots Update 2016 ausführen.
+ - [rootsupd201601](http://sdfox7.com/2000/Important_EOL_Updates/rootsupd201601.exe) (*ca. 500 Kb*)
+
+**Schritt 6**: Bevor wir nun den Computer via Windows Update aktualisieren, müssen wir in der *Systemsteuerung* unter *Internet Optionen* im Reiter "Erweitert / Advanced" zwei Einstellungen ändern:
+ - "Automatically check for Internet Explorer updates" deaktivieren
+ - "Use TLS 1.0" aktivieren
+ - Einstellungen *Übernehmen* und *schließen*
+
+**Schritt 7**: Über die Startleiste das **Windows Update** öffnen. Die etwaige Dialogbox bestätigen und auf "Custom/Benutzerdefiniert" gehen. Nach einer gewissen Zeit, bei mir dauerte das auf dem alten System schon ein paar Minuten, sollte eine Meldung erscheinen, die Komponenten für Windows Update installieren will. Diese Updates installieren und den Computer neu starten.
+
+![Windows 2000 Update](/assets/2018/w2k/custom-benutzerdefiniert.jpg)
+<small>Windows 2000 Update</small>
+
+**Schritt 8**: Nochmal auf Windows Update gehen und nochmal auf "Custom" gehen. Es sollten ungefähr 90 Updates angezeigt werden. Statt diese zu installieren in der linken Seite auf "Software, optional" gehen, DirectX 9.0c auswählen und installieren. Nochmal den Computer neustarten.
+
+**Schritt 9**: Das gleiche nochmal, nur diesmal unter "Software, optional" den **Windows Media Player 9** installieren. Diesmal muss der PC nicht neu gestartet werden. Ja, ich hasse den Media Player auch, ich war immer ein Verfechter von WinAmp, aber die mit dem Media Player einhergehenden neuen Dateien sind gut fürs System.
+
+**Schritt 10**: Nochmal über "Benutzerdefiniert / Custom" nach Updates suchen, auf "Software, optional" gehen und das **Microsoft .NET Framework 2.0** auswählen. Jetzt auf "Install Updates" gehen und dem Computer zusehen, wie er alle anderen Updates installiert. Danach den Computer neu starten. *Das dauert…* … *und dauert*
+
+**Schritt 11**: Nochmal über Custom nach Updates suchen und das Service Pack 1 für das .NET Framework und ein Sicherheitsupdate für das .NET Framework installieren. Das sollten die letzten Updates sein.
+
+Schritt 12: Das *cumulative Security Update* für den IE6 installieren. *Rechtsklick Ziel speichern unter…* wählen.
+ - [IE6.0SP1-KB2817183-WINDOWS2000-X86-ENU](/assets/2018/w2k/12.IE6.0SP1-KB2817183-WINDOWS2000-X86-ENU.EXE) (*ca. 6 MB*)
+
+Das war es zunächst, nun besitzt ihr ein durchgepatchtes Windows 2000 SP4 welches auf dem aktuellsten Stand ist. Es kann jetzt fast alles, was auch Windows XP kann. Damit lässt sich gut arbeiten, wenngleich Microsoft aber die Sicherheitsupdates eingestellt hat und neu entdeckte Sicherheitslücken in Windows 2000 offen bleiben. Ein System für das Internet ist es eigentlich nicht.
+
+**Schritt 13**: Blackwingcat´s inoffizielles Kernelupdate installieren. Es wird dafür sorgen, dass Programme denken, sie würden unter Windows XP laufen. Es wird ein Dialogfeld erscheinen, welches man einfach mit "Execute" bestätigt. Die Default-Settings sind die richtigen, auch wenn mein *kanji*
+ etwas eingerostet ist. Das Update nun installieren und den Computer neu starten.
+ - [Windows2000-KB935839-v28c-x86-ENU.exe](http://www.mediafire.com/file/14d2t9yl35tim30/Windows2000-KB935839-v28c-x86-ENU.exe) (*ca. 24 MB*)
+
+**Schritt 14**: AppComp.cmd und reg.exe in den gleichen Ordner extrahieren.
+ - [AppComp & Reg.exe als ZIP](/assets/2018/w2k/14.Appcompreg.exe.zip) (*ca. 23 Kb*)
+
+*That's all for today…*
+
+Wenn man nun ein mit Windows XP kompatibles Programm ausführen will, startet man AppComp und zieht die gewünschte EXE-Datei in das Fenster. Dann drückt man Enter und es wird gepatcht. Das Programm lässt sich dann unter W2K ausführen respektive installieren.
+
+So ziemlich alle mit Windows XP kompatiblen Programme funktionieren über diesen Trick. Es kann so auch ein aktueller Virenscanner installiert werden, damit Windows 2000 nicht mehr gar so unsicher ist.
+
+**Windows 2000 lebt** :-)
+
+<small>
+**Artikelbild** 1: Photo by [rawpixel](https://unsplash.com/photos/AJCNM8JrzT8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/explore?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)<br />
+**Artikelbild** 2: (C) eigenes Werk.
+</small>
+
+---
+
+**Fußnoten**:
+
+[^1]: 3Com Netzwerkkarte nachgerüstet, Soundkarte nachgerüstet, Speicher nachgerüstet, Arachne Browser installiert…
+[^2]: Es handelt sich um einen Pentium 166 (ohne MMX) mit 128 MB-EDO-Ram, einer 4GB CF Karte am IDE Kanal als Festplatte 1 und noch einigen weiteren coolen Dingen…

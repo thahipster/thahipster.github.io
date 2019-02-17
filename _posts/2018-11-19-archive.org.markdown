@@ -1,0 +1,44 @@
+---
+layout: post
+title: 'Archive.org ignoriert robots.txt'
+media_order: apple.comde.JPG
+date: '09:27 19-11-2018'
+tags: 
+ - gedanken
+ - netzwelt
+---
+
+Archive.org hat sich der **Archivierung** des *Internets* verschrieben. Und zwar in unregelmäßigen Abständen vom Internet in der derzeit gültigen Form der Speicherung. Es wird dabei praktisch alles archiviert, was Websites so hergeben. Dadurch hat man im Nachgang einen realistischen Blick auf das Web, meinetwegen am [26.06.2004](https://web.archive.org/web/20040626063515/http://www.apple.com:80/de/). Der voran gegangene Link zeigt wie im unteren Bild angebenen die deutsche Website von *Apple.com*, live wie sie am 26.06.2004 aussah.
+
+![Die Website www.apple.com/de am 26.06.2004](/assets/2018/apple.comde.JPG)
+<figcaption>Die Website www.apple.com/de am 26.06.2004</figcaption>
+
+### nützlich
+Und das ist prinzipiell auch gut so. Denn das Netz ist leider sehr vergesslich. Viele Dinge existieren für den Moment, in einer gewissen Zeitspanne werden gewisse Informationen häufig abgerufen, dann gerät das in Vergessenheit und man selbst bekommt im Zweifelsfall gar nicht mehr mit, ob diese damals benötigen Inhalte noch existieren, weil sich der Fokus der Menschen ändern. Da macht es Sinn, das Netz zu archivieren. 
+Mir selbst hat **Archive.org** schon oft geholfen, beispielsweise als ich mal einen Treiber für einen alten Compaq Vintage PC für *Windows 3.11* für eine *Cirrus Logic* Grafikkarte gesucht habe. Compaq gibt es nämlich als Hersteller schon lange nicht mehr, die alten Treiber-Support-Seiten auch nicht, aber Archive.org hat das alles archiviert, mitsamt der Dateien. Und ich konnte sie herunter laden. Prima…
+
+Aber birgt das nicht auch Gefahren? Ja wohl.
+
+### nicht so nützlich
+Und doch solle man als Seitenbetreiber das Recht erhalten, nicht archiviert zu werden. Wenn ich der Meinung bin, dass meine Website weder durch Google, noch durch Archive.org oder eine andere Website indexiert werden sollten, dann habe ich gute Gründe dazu und dann bitte ich eigentlich darum, dass zu respektieren. 
+Dafür gibt nämlich es sogar einen Machanismus, nämlich die sogenannte `robots.txt` Datei.
+
+In dieser Datei kann ich ganz bequem aus / oder -einschließen, welcher Bot meine Website indexieren darf - oder sogar bestimmen, welche bestimmten Teile davon, und welche nicht. Eine typische robots.txt sieht demnach so aus:
+
+{% highlight php %}
+User-agent: ia_archiver
+Disallow: /
+{% endhighlight %}
+
+Dieses Beispiel schließt den Archiver-Bot von archive.org aus, alle anderen Suchmaschinen aber ein.
+Nun ist es aber leider so, dass Archive.org der [Meinung](https://blog.archive.org/2017/04/17/robots-txt-meant-for-search-engines-dont-work-well-for-web-archives/) ist, diesen Mechanismus nicht mehr zu verwenden, bzw. nicht mehr darauf hören zu müssen, was ein Seitenbetreiber einstellt. Denn Archive.org ist der Meinung, bestimmen zu dürfen, das alles archiviert wird, um ein realisistisches Bild des Netzes abgeben zu können, wie es wirklich war. Denn durch robots.txt wird die Archiverung des Netzes zerklüftet. Durchaus nachvollziehbar. Von beiden Seiten. 
+
+Ich für meine Teil möchte, dass Omas Bilder vom letzten Kindergeburtstag, einsehbar auf meiner Domain, jedoch für Google und andere ausgeschlossen, *eben nicht* von archive.org indexiert und gespeichert werden kann. Damit es nicht in 13 Jahren *wieder* aufgerufen werden kann, während meine Domain schon lange nicht mehr besteht und auch diverse andere Gründe dafür sorgen, dass diese Bilder nicht **woanders** im Netz auffindbar sein sollten. Denn ich habe das so entschieden, ich habe gute Gründe dafür.
+
+Doch das geht nicht.
+
+### Die Krux
+
+Am Beispiel meiner eigenen Domain wird das sichtbar. Ich habe sämtlichen Bots von archive.org per robots.txt verboten, meine Website zu speichern. Und wenn ich meine Website aufrufe, dann kann ich sogar die gespeicherte Version meiner eigenen robots.txt aufrufen, wo steht, dass ich nicht archiviert werden möchte, im Archiv auf archive.org - das ist leider die Wahrheit.
+
+([via](https://www.heise.de/newsticker/meldung/Archivierung-des-Internets-Internet-Archive-ignoriert-kuenftig-robots-txt-3693558.html))

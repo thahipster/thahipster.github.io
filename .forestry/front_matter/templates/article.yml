@@ -1,0 +1,24 @@
+---
+label: Article
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Titel
+  description: Überschrift
+  config:
+    required: true
+  default: 2019-XX-XX-Name.md
+- type: file
+  name: image
+  label: Artikelbild
+  description: Das Artikelbild auf der Startseite
+  config:
+    maxSize: '4'
+- type: tag_list
+  name: tags
+  label: TAGs
+- type: datetime
+pages:
+- _posts/2019-02-14-apfelhammer-de-nutzt-github.md

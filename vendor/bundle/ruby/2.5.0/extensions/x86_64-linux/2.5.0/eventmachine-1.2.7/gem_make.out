@@ -1,0 +1,30 @@
+current directory: /home/appleham/apfelhammer.de/thafaker.apfelhammer.de/vendor/bundle/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/opt/ruby25/bin/ruby -I /opt/ruby25/lib/ruby/site_ruby/2.5.0 -r ./siteconf20190217-16200-e640w3.rb extconf.rb
+creating Makefile
+
+current directory: /home/appleham/apfelhammer.de/thafaker.apfelhammer.de/vendor/bundle/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" clean
+
+current directory: /home/appleham/apfelhammer.de/thafaker.apfelhammer.de/vendor/bundle/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR="
+compiling mapper.cpp
+cc1plus: Warnung: Kommandozeilenoption »-Wimplicit-int« ist gültig für C/ObjC, aber nicht für C++ [standardmäßig aktiviert]
+cc1plus: Warnung: Kommandozeilenoption »-Wdeclaration-after-statement« ist gültig für C/ObjC, aber nicht für C++ [standardmäßig aktiviert]
+cc1plus: Warnung: Kommandozeilenoption »-Wimplicit-function-declaration« ist gültig für C/ObjC, aber nicht für C++ [standardmäßig aktiviert]
+cc1plus: Warnung: nicht erkannte Kommandozeilenoption »-Wno-self-assign« [standardmäßig aktiviert]
+cc1plus: Warnung: nicht erkannte Kommandozeilenoption »-Wno-constant-logical-operand« [standardmäßig aktiviert]
+cc1plus: Warnung: nicht erkannte Kommandozeilenoption »-Wno-parentheses-equality« [standardmäßig aktiviert]
+cc1plus: Warnung: nicht erkannte Kommandozeilenoption »-Wno-tautological-compare« [standardmäßig aktiviert]
+compiling rubymain.cpp
+cc1plus: Warnung: Kommandozeilenoption »-Wimplicit-int« ist gültig für C/ObjC, aber nicht für C++ [standardmäßig aktiviert]
+cc1plus: Warnung: Kommandozeilenoption »-Wdeclaration-after-statement« ist gültig für C/ObjC, aber nicht für C++ [standardmäßig aktiviert]
+cc1plus: Warnung: Kommandozeilenoption »-Wimplicit-function-declaration« ist gültig für C/ObjC, aber nicht für C++ [standardmäßig aktiviert]
+cc1plus: Warnung: nicht erkannte Kommandozeilenoption »-Wno-self-assign« [standardmäßig aktiviert]
+cc1plus: Warnung: nicht erkannte Kommandozeilenoption »-Wno-constant-logical-operand« [standardmäßig aktiviert]
+cc1plus: Warnung: nicht erkannte Kommandozeilenoption »-Wno-parentheses-equality« [standardmäßig aktiviert]
+cc1plus: Warnung: nicht erkannte Kommandozeilenoption »-Wno-tautological-compare« [standardmäßig aktiviert]
+linking shared-object fastfilereaderext.so
+
+current directory: /home/appleham/apfelhammer.de/thafaker.apfelhammer.de/vendor/bundle/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20190217-16200-2a3ii6

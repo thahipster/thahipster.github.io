@@ -1,0 +1,15 @@
+version: 2  # CircleCI version
+jobs:
+  build:  # define our job `build`
+    docker:
+      - image: jekyll/jekyll:3.5.0
+    working_directory: /srv/jekyll
+    steps:
+      - checkout  # checkout latest code in Github
+      - run:
+        command: ./build-jekyll.sh
+workflows:
+  version: 2
+  build:  # workflow is called `build`
+    jobs:
+      - build  # workflow `build` consists of a single job, also called `build`

@@ -1,0 +1,72 @@
+---
+layout: post
+title: Aktuelle Stunde "Zur Situation von älteren iMacs"
+date: '22:36 2019-01-18'
+image: mxmimac.jpg
+tags: 
+ - vga
+ - reballing
+ - backofen
+ - grafikkarte
+---
+
+Es ist an der Zeit, mal über die Situation von **Grafikkarten** in iMacs der Generation bis inklusive 2011 zu schreiben. Ich meine hierbei nicht nur das Problem vieler Benutzer mit Ihren defekten Grafikkarten, sondern eher die Behebbarkeit der damit zusammen hängenden Schwierigkeiten. Denn das gestaltet sich nicht ganz so einfach, was in der Natur der Sache liegt. <!--more-->
+
+![iMac von hinten](/assets/2019/01/imacmxm2.jpg)
+
+Die Grafikkarten in iMacs, hauptsächlich die **AMD Radeon HD 5770** bis **6970** in *1024 MB* und *2048 MB* Varianten, fallen reihenweise aus. Das äußert sich in unterschiedlicher colleur, meist aber bei durch einen fehlenden Boot nach dem Apple-Logo, vertikalen Streifen quer über das Display (mit und ohne Funktion des iMacs) bis hin zu der Situaion, dass der Bildschirm einfach schwarz bleibt. Dies scheint vor allem an thermischen Problemen des iMacs zu liegen.
+
+Das betrifft vor allem die iMacs von *2011*, jedoch sind auch iMacs von 2009 und 2010 betroffen, jedoch nicht ganz so häufig. Hintergrund ist demnach ein thermisches Problem, die Grafikkarten überlasten respektive sind nicht dafür ausgelegt und gehen kaputt. Apple sah sich nach anfänglicher Weigerung sogar dazu genötigt ein Reparaturprogramm aufzulegen, was allerdings nur bis zu 4 Jahre oder 5 Jahre nach Kauf des iMacs galt und nur für ganz bestimmte Chargen und Seriennummern. So gingen viele Nutzer leer aus, hatten am Ende aber den selben Defekt. Dies reultiert darin dass sich defekte iMac Grafikkarten auf eBay häuften. Selbst Nutzer die vom Apple Programm profitieren konnten und deren Grafikkarte getauscht wurde, klagten zum Teil nur zwei Jahre später über einen erneuten Defekt mit den gleichen Symptomen. Scheinbar gingen die reparierten Grafikkarten ebenfalls kaputt. Die Ursache für den Fehler war also nicht abgestellt. Apple kümmerte sich jedoch nicht mehr um diese Probleme denn nach fünf Jahren müssen keine Ersatzteile mehr bereit gehalten werden… sehr zum Leidwesen viele Nutzer, bis heute.
+
+![ATI Radeon HD 5750 1024 MB](/assets/2019/01/hd5770mxm.jpg)
+<small>ATI Radeon HD 5750 1024 MB</small>
+
+Ein iMac von 2010 oder 2011 mit einem Core i7 Prozessor ist auch heute noch ein sehr schnelles Arbeitsgerät mit einem sehr guten Bildschirm. Rüstet man diese iMacs mit einer SSD aus (oder hat sie ab Werk bereits verbaut), dann sind das tatsächlich noch sehr gute Rechner die man nicht ersetzen muss. Sie sind für die allermeisten alltäglichen Aufgaben schnell genug. Dazu kommt, dass sie sehr schick aussehen und eben macOS darauf läuft. Noch dazu waren sie mal sehr teuer.
+Aber wie dem auch sei, es gibt sicher genügend individuelle Gründe warum man seien älteren iMac auch heute noch betreiben möchte.
+
+Und da fangen die Probleme an. Denn wenn die hochintegrierte Grafikkarte nicht mehr mitmacht, ist der iMac nicht mehr zu gebrauchen. Erst recht wenn für eine Reparatur Preise aufgerufen werden, die den Wert des Geräts bei weitem übersteigen. Jedoch verfügen die iMacs bis 2011 über Grafikkarten mit einem MXM-Steckplatz, der aus Notebooks bekannt ist. Die iMacs aber 2012 haben dieses Feature nicht mehr, dort sind die Grafikchips aufs Mainboard geklebt. Grund genug also, sich mit einem Selbsttausch der Grafikkarte zu beschäftigen. Das ist nämlich gar nicht so leicht. Ich selbst habe neulich erst die SSD und die HDD in meinem iMac gewechselt, es ist nicht trivial. Die Grafikkarte auszubauen gestaltet sich als noch ein bisschen aufwändiger.
+
+### BGA, Reballing, Reflowing
+
+Die Sache mit dem Backofen. Die Leute haben also selbst Hand angelegt und sich mit ihren iMacs beschäftigt. Dabei hat sich heraus gestellt, dass bestimmte Hitze das Problem der defekten Grafikkarten beheben kann. Zumindest für eine gewisse Zeit. Und so fingen sie an, ihre Grafikkarten in die Backröhre zu legen. Oft liest man im Netz, dass hier 30 Minuten bei 110 Grad helfen. Manchmal auch heißere Temperaturen bei kürzerer Zeit, eingewickelt in Alufolie. [^1] Angeblich hat dies manchmal für bis zu zwei weitere Jahre gereicht. Aber auch diese Prozedur ist nicht von Dauer, und wieder geht die Grafikkarte irgendwann kaputt.
+
+### Apple-fremde Grafikkarte in iMac einbauen
+
+Aber natürlich gibt es dann auch immer Leute, die sich mit Alternativen beschäftigen. In diesem Fall heißt die Alternative: eine nicht-Apple-eigene MXM-Grafikkarte eines Drittanbieters einbauen. Schnell stellte sich hier allerdings heraus, dass es zu Problemen kommt. Vorab möchte ich sagen: keine Probleme gibt es mit Apple-eigenen Grafikkarten aus anderen Macs. Egal ob das nun eine kleinere Karte oder gar eine Stärkere ist. Es gibt diverse Berichte, zum Beispiel dass in einem iMac 2010 die ATI HD 5750 ausgebaut und dafür eine ATI 6970 2048 GB eigebaut worden ist. Und umgekehrt, wenn es Apple-eigene VGAs aus anderen iMacs waren. Allerdings halten diese Grafikkarten ja nicht. Es gibt auch keine Neuteile mehr. Ich betone an dieser Stelle also noch mal: alles was ihr auf eBay etc. erwerben könnt, ist aus fragwürdiger Produktion. Meist sind es vormals defekte Grafikkarten, die ein Bastler zu neuem Leben erweckt hat. Vielleicht mit der Backofen-Methode. Neue Karten gibt es nicht mehr zu kaufen. Auch keine neuen Chips für diese Karten. Da aber die Chips kaputt gehen, müssten diese ausgetauscht werden, um hier dauerhaften Erfolg verzeichnen zu können. Bedenkt dies bitte.
+
+### nVidia GTX780 MXM
+
+Wie zuvor schon erwähnt gibt es eine ganze Reihe von Leuten die es sich zur Aufgabe machen, hier den Durchbruch zu erzielen. Allerdings ist dieser noch nicht geschafft. Das Problem: Wenn man keine Apple-eigene Grafikkarte hat, so fehlt dieser Grafikkarte das EFI-Bios. Das bedeutet, die fremde Grafikkarte funktioniert entweder gar nicht, oder sie funktioniert nur ohne Bootscreen.
+
+> Okay, dann sehe ich eben keinen Apfel beim Einschalten…
+
+…könnte man jetzt argumentieren. Aber das Problem des Bootscreens geht weiter. Man kann faktisch auch kein Windows booten. Oder nur blind. Weiterhin hat man keine Recovery-Parition, weil hier die EFI-Sache läuft, da noch kein echtes macOS installiert ist. Man hat also mit großen Einschränkungen zu kämpfen und muss eine applefähige Grafikkarte notfalls wieder in seinen iMac einbauen, wenn man das System aus irgendeinem Grund neu aufsetzen möchte.
+Vielen Nutzern ist das egal, sie organisieren sich eine GTX780 mit 2 oder 4 GB Ram und stecken diese in den iMac ([Hier](https://www.ifixit.com/Story/18646/Successful_iMac_Upgrade_to_GTX_880M) der Bericht von jemandem, der eine GTX880 eingebaut hat). Weiterhin zu beachten ist an dieser Stelle dass der eigentlich Kühlkörper nicht passt und mit einem Dremel bearbeitet werden muss. Das sollte man auch tunlichst bedenken, denn die Grafikkarten haben wohl thermische Gründe, eine GTX 780 verbraucht definitiv mehr Watt und produziert demnach mehr Wärme. [Hier](https://forums.macrumors.com/threads/2011-imac-graphics-card-upgrade.1596614/) geht es zum ultimatioven iMac-Grafikkarten-Thread im MacRumors Forum, hier wird mit Hilfe von Netkas [^2], einer Berühmtheit beim MacPro, und anderen Diskutiert. Dieser Thread geht über 62 Seiten und Begann im Jahr 2012 und reicht bis heute, bis 2019.
+
+Welche Grafikkarten haben sich etabliert?
+
+* nVidia GTX680 MXM von DELL/Alienware (mit den Webtreibern)
+* nVidia GTX780 MXM von DELL/Alienware (mit den Webtreibern)
+* nVidia Quadro 3000 MXM (mit den Webtreibern)
+
+Wie gesagt, diese Karten funktionieren wahrscheinlich unter macOS, sie zeigen aber keine Bootscreen und nach einem Update kann es auch wieder vorbei sein. Es gibt keine Garantie. *To Change your VGA in an older iMac is like gambling*.
+
+### EFI-Bios auf VGA flashen
+
+Leider ist es den Kollegen Grafik-Hacker bisher nicht gelungen, ein EFI-Bios auf eine applefremde Grafikkarte für den iMac zu flashen. Dann könnte man sie nämlich wie eine Echte benutzen. Ich betone das bezogen auf die iMacs, denn auf normale Grafikkarten (nicht MXM-Notebook-Grafikkarten), meinetwegen für den **Mac Pro** auf den die gleiche Problematik zutrifft, ist das schon mehrmals gelungen. Es ist prinzipiell also möglich eine fremde Grafikkarte günstig zu kaufen (eine Apple-Grafikkarte kostet aufgrund der geringeren Herstellungszahl und der speziellen Anforderungen immer erheblich mehr als die gleiche Grafikkarte für einen PC), sie zu flashen und fortan in seinem MacPro vollständig zu betreiben. Dies liegt in der Natur der Sache. Wie zuvor erwähnt ist das Öffnen eines iMacs eine heikle Angelegneheit, das erschwert die schnelle Arbeit. Weiterhin benötigt man eine EFI Firmware eines anderen iMacs mit eben jener Grafikkarte, drittens gibt es aber keine MXM-iMacs mit neueren Grafikkarten mehr sodass man sich vielleicht beim MacPro bedienen muss, der aber wiederum anders mit der Grafikkarte und den Anschlüssen spricht als eine MXM-Grafikkarte mit EFIflash in einem iMac und… kurzum… ich sehe schwarz.
+
+Es gibt noch einen zweiten Grund warum man ein Grafikkarten-Update in seinem iMac durchführen möchte: Mojave-Support. Mit Mojave hat Apple den Support für ganz viele Apple-Geräte die unter 10.13 High Sierra noch problemlos funktionierten, abgebrochen. Dabei stellt Mojave keine größeren Anforderungen an die Geräte. Vielmehr verlangt Mojave aber Metal-Support. Den bieten weit weniger Grafikkarten, als vorher. Und so kommt es, dass Mojave auf Geräten aöter als 2012 faktisch nicht mehr läuft. Mit einer neueren Grafikkarte indes schon.
+
+Es bleibt spannend.
+
+<small>
+**Artikelbild**: Photo by [Benjamin Voros](https://unsplash.com/photos/Hon8H9dvTBM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/music?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText). <br />
+**Artikelbild 2**: Photo by [Little John](https://unsplash.com/photos/Z54rB8BhG48?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@joao_freire?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
+</small>
+
+---
+
+**Fußnoten**:
+
+[^1]: [Hier](https://www.youtube.com/watch?v=qILTJ1nbuBo) ein Youtube-Video als Anleitung.
+[^2]: Netkas [Blog](http://netkas.org), Netkas [Forum](http://netkas.org/forum/).
